@@ -1,0 +1,32 @@
+mat-drawer-container {
+	height: 100%;
+
+	mat-drawer {
+		width: 300px;
+		padding: 1.5em;
+	}
+}
+
+mat-toolbar {
+	align-items: center;
+	box-sizing: border-box;
+
+	.username {
+		font-size: 15px;
+	}
+}
+.content-container {
+	padding: 2em;
+
+	.grid {
+		display: flex;
+
+		.patients {
+			flex: 3;
+			margin-right: 2em;
+		}
+		.monitor {
+			flex: 5;
+		}
+	}
+}

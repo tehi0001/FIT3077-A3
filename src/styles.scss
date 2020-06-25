@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.align-right {
+	text-align: right !important;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.margin-top-1 {
+	margin-top: 1em;
+}
+
+.margin-top-2 {
+	margin-top: 2em;
+}
+
+.margin-top-3 {
+	margin-top: 3em;
+}
+
+.app-logo {
+	font-family: 'Baloo Bhaina 2', cursive !important;
+	font-weight: 600;
+	margin: 0;
+}
+
+mat-spinner {
+	margin: .7em auto;
+
+	&.no-margin {
+		margin: 0;
+	}
+}
+
+mat-card {
+	box-sizing: border-box;
+}
+
+.flex-fill {
+	flex: 1 1 auto;
+}
+
+.flex {
+	display: flex;
+
+	&.flex-between {
+		justify-content: space-between;
+	}
+
+	&.items-center {
+		align-items: center;
+	}
+}
+
+.title {
+	font-size: 18px;
+}
+
+.text-warn {
+	color: #a4040a;
+}
+
+a {
+	color: #000;
+	font-weight: 500;
+
+	.text-warn {
+		color: #a4040a;
+	}
+}

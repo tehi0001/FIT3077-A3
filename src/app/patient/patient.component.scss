@@ -1,0 +1,24 @@
+.title {
+	margin-left: 1em;
+}
+
+table {
+	border-collapse: collapse;
+	margin-bottom: 2em;
+	th, td {
+		padding: .75em 2em;
+		border: 1px solid #ddd;
+		border-left: 0;
+		border-right: 0;
+	}
+	th {
+		font-weight: 500;
+		padding-left: 0;
+		text-align: left;
+		vertical-align: top;
+		width: 30%;
+	}
+	td {
+		padding-right: 0;
+	}
+}

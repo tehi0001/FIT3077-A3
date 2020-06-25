@@ -1,0 +1,22 @@
+<div class="container">
+	<mat-card class="align-center">
+		<h1 class="app-logo">MedicineMan</h1>
+		<h3>Enter your ID to continue</h3>
+		<form [formGroup]="loginForm" autocomplete="off" (submit)="login()">
+			<mat-form-field appearance="fill" class="full-width">
+				<mat-label>Practitioner ID</mat-label>
+				<input type="number" matInput formControlName="id">
+			</mat-form-field>
+			<div class="align-left">
+				<mat-checkbox formControlName="remember" value="true">Remember me on this device</mat-checkbox>
+			</div>
+			<div class="margin-top-2">
+				<button type="submit" mat-raised-button class="full-width" color="primary"
+					[disabled]="isBusy || loginForm.invalid">
+					<span *ngIf="!isBusy">Sign In</span>
+					<mat-spinner diameter="20" color="primary" *ngIf="isBusy"></mat-spinner>
+				</button>
+			</div>
+		</form>
+	</mat-card>
+</div>

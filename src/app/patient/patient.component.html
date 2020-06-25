@@ -1,0 +1,47 @@
+<div class="flex items-center">
+	<button mat-icon-button (click)="back.emit()">
+		<mat-icon>arrow_back</mat-icon>
+	</button>
+	<div class="title">Patient details</div>
+</div>
+
+<div class="align-center margin-top-2" *ngIf="isLoading">
+	<div>Loading patient details...</div>
+	<div class="margin-top-1">
+		<mat-spinner diameter="25"></mat-spinner>
+	</div>
+</div>
+
+<div class="margin-top-2" style="padding: 1em" *ngIf="!isLoading">
+	<table cellspacing="0" cellpadding="0" class="full-width">
+		<tr>
+			<th>Name :</th>
+			<td>{{patient?.name}}</td>
+		</tr>
+		<tr>
+			<th>Gender :</th>
+			<td>{{patient?.gender | titlecase}}</td>
+		</tr>
+		<tr>
+			<th>Date of Birth :</th>
+			<td>{{patient.dateOfBirth | date: 'dd MMMM, yyyy'}}</td>
+		</tr>
+		<tr>
+			<th>Address :</th>
+			<td>{{patient.address}}</td>
+		</tr>
+		<tr>
+			<th>City :</th>
+			<td>{{patient.city}}</td>
+		</tr>
+		<tr>
+			<th>State :</th>
+			<td>{{patient.state}}</td>
+		</tr>
+		<tr>
+			<th>Country :</th>
+			<td>{{patient.country}}</td>
+		</tr>
+
+	</table>
+</div>

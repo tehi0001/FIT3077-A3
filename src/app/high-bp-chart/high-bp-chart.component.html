@@ -1,0 +1,10 @@
+<div class="margin-top-2 align-center" *ngIf="chartData.length == 0 && !isLoading">No monitored patients</div>
+<div class="margin-top-2 align-center" *ngIf="chartData?.length == 0 && isLoading">Loading charts...</div>
+<div *ngIf="chartData.length > 0">
+	<div style="display: flex; flex-wrap: wrap">
+		<div *ngFor="let chart of chartData" style="margin-right: 2em; margin-top: 2em">
+			<h3 class="align-center">{{chart.patientName}}</h3>
+			<canvas width="400" height="300" id="{{chart?.patientId}}"></canvas>
+		</div>
+	</div>
+</div>

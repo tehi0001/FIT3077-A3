@@ -1,0 +1,4 @@
+<div class="margin-top-2" [hidden]="dataSet.length == 0">
+	<canvas id="chart" width="400" height="200"></canvas>
+</div>
+<div *ngIf="dataSet.length == 0" class="margin-top-2 align-center">No monitored patients</div>

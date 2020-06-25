@@ -1,0 +1,28 @@
+<div>SETTINGS</div>
+
+<form [formGroup]="settingsForm" (submit)="onApply()">
+	<mat-form-field appearance="outline" class="full-width margin-top-2">
+		<mat-label>Update interval</mat-label>
+		<input type="number" matInput autocomplete="off" formControlName="updateInterval">
+	</mat-form-field>
+	<div>
+		<mat-radio-group class="flex flex-between" formControlName="intervalUnit">
+			<mat-radio-button value="seconds">Seconds</mat-radio-button>
+			<mat-radio-button value="minutes">Minutes</mat-radio-button>
+			<mat-radio-button value="hours">Hours</mat-radio-button>
+		</mat-radio-group>
+	</div>
+
+	<mat-form-field appearance="outline" class="margin-top-2 full-width">
+		<mat-label>High Risk Systolic (mm/Hg)</mat-label>
+		<input matInput formControlName="highSystolic">
+	</mat-form-field>
+	<mat-form-field appearance="outline" class="margin-top-1 full-width">
+		<mat-label>High Risk Diastolic (mm/Hg)</mat-label>
+		<input matInput formControlName="highDiastolic">
+	</mat-form-field>
+
+	<div class="margin-top-2" style="position:absolute; bottom: 0; left: 0; right: 0; padding: 1.5em">
+		<button type="submit" mat-raised-button color="primary" class="full-width" [disabled]="settingsForm.pristine || settingsForm.invalid">Apply</button>
+	</div>
+</form>

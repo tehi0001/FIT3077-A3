@@ -1,0 +1,12 @@
+<div class="margin-top-2" *ngIf="dataSet.length > 0">
+	<div *ngFor="let patient of dataSet" class="margin-top-1">
+		<strong>{{patient?.patientName}} : </strong>
+		<span style="margin: 0 1em;" *ngFor="let sysData of patient.data">{{sysData.systolic}} ({{sysData.effectiveDate | date:'dd MMM yyyy, hh:mm aaa'}})</span>
+	</div>
+</div>
+<div *ngIf="dataSet.length == 0 && isLoading" class="align-center margin-top-2">
+	Loading historical systolic BP data
+</div>
+<div *ngIf="dataSet.length == 0 && !isLoading" class="align-center margin-top-2">
+	No monitored patients
+</div>

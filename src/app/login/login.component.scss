@@ -1,0 +1,15 @@
+.container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	mat-card {
+		width: 350px;
+		padding: 2em;
+
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+}
